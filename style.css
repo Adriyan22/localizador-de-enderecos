@@ -1,0 +1,116 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    
+}
+
+
+body, html {
+    height: 100vh;
+    background-color: blue;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+}
+
+#container {
+    height: 90vh;
+    width: 90vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+h1, label, input[id="cep"], .endereco{
+    color: aliceblue;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+label {
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    margin: 0 5px;
+}
+
+input[id="cep"] {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+input[type="submit"] {
+    border-radius: 5px;
+    border: none;
+    padding: 7px;
+    width: 100%;
+    max-width: 60%;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 0.5px;
+    background-color: #ffffff92;
+    transition: .3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    background-color: #ffffffbb;
+    color: #000;
+}
+
+input[type="submit"]:active {
+    background-color: #fff;
+}
+
+
+
+@media  screen and (max-width: 600px) {
+    .endereco {
+        width: 100%;
+        max-width: 90%;
+        overflow: auto;
+    }
+    
+}
+
+@media screen and (min-width: 600px) and (max-width: 998px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    .endereco {
+        width: 100%;
+        max-width: 70%;
+        overflow: auto;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 998px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .endereco {
+        width: 100%;
+        max-width: 80%;
+        text-align: center;
+    }
+}
